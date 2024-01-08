@@ -3,7 +3,7 @@ import React from 'react'
 
 const TodoListScreen = () => {
   return (
-    <View>
+    <View style={styles.hello}>
       <Text>TodoListScreen</Text>
     </View>
   )
@@ -11,4 +11,10 @@ const TodoListScreen = () => {
 
 export default TodoListScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  hello: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+})
