@@ -1,19 +1,23 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { createStackNavigator } from '@react-navigation/stack'
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import TodoListScreen from '../screens/TodoListScreen'
+import TodoListScreen from '../screens/TodoListScreen';
+import TodoDetailsScreen from '../screens/TodoDetailsScreen';
+import AddTodoScreen from '../screens/AddTodoScreen';
 
 const Stack = createStackNavigator();
 
-const AppNavigator = () => {
+function AppNavigator() {
   return (
-    <Stack.Navigator>
-        <Stack.Screen name='Todo List' component={TodoListScreen}/>
+    <Stack.Navigator initialRouteName="TodoList">
+      <Stack.Screen name="TodoList" component={TodoListScreen} />
+      <Stack.Screen name="TodoDetails" component={TodoDetailsScreen} />
+      <Stack.Screen name="AddTodo" component={AddTodoScreen} />
     </Stack.Navigator>
-  )
+  );
 }
 
-export default AppNavigator
+export default AppNavigator;
 
 const styles = StyleSheet.create({})
